@@ -6,11 +6,15 @@
 from sqlalchemy import Column, String, Integer
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+import os
 db = SQLAlchemy()
 
 database_name = "agency"
-database_path = "postgres://{}:{}@{}/{}".format(
-    'postgres', '5678.mna', 'localhost:5432', database_name)
+
+''' database_path = "postgres://{}:{}@{}/{}".format(
+    'postgres', '5678.mna', 'localhost:5432', database_name)'''
+
+database_path = os.environ['DATABASE_URL']
 '''
 db_setup(app)
     binds a flask application and a SQLAlchemy service
