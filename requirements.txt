@@ -47,7 +47,6 @@ prometheus-client==0.8.0
 prompt-toolkit==3.0.5
 psycopg2==2.8.5
 pyasn1==0.4.8
-pywin32
 pycodestyle==2.6.0
 pycparser==2.20
 pyflakes==2.2.0
@@ -73,7 +72,6 @@ toml==0.10.1
 tornado==6.0.4
 traitlets==4.3.3
 urllib3==1.25.10
-vboxapi
 wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==1.0.1
