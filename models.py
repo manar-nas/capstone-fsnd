@@ -10,7 +10,7 @@ import os
 db = SQLAlchemy()
 
 
-def setup_db(app, database_path=os.environ.get('DATABASE_URL')):
+def db_setup(app, database_path=os.environ.get('DATABASE_URL')):
 
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
