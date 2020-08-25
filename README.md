@@ -19,7 +19,7 @@ pip install -r requirements.txt
 To run the application run the following commands:
 
 ```
-export FLASK_APP=flaskr
+export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run 
 ```
