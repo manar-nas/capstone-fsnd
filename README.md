@@ -1,24 +1,24 @@
-# Motivation
-This is my capstone project submission for the Udacity Full-Stack Developer Nanodegree program.
+# capstone project for the udacity full stack nanodegree program.
 
-The goal is to demonstrate the ability to:
+Heroku link: 
 
-* Design data models and their relations using SQLAlchemy.
-* Write database queries using SQLAlchemy.
-* Design an HTTP API with Flask.
-* Document the API and development guide in detail.
-* Implement authentication and Role Based Access Control using Auth0.
-* Test the API and access control capabilities. 
-* Deploy the app to Heroku.
+``` 
+https://my-capstone-app.herokuapp.com
+``` 
 
-Once you have your virtual environment setup and running, install dependencies by naviging to the /starter directory and running:
+## Installing Dependencies
+
+Once you have your virtual environment setup and running, install dependencies by naviging to the /backend directory and running:
 
 ```
 pip install -r requirements.txt
-``` 
+
+```
+
 To run the application run the following commands:
 
 ```
+export DATABASE_URL=<database-url>
 export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run 
@@ -29,7 +29,8 @@ http://127.0.0.1:5000/
 ```
 
 # Tests
-In order to run tests navigate to the backend folder and run the following commands:
+
+To tests following commands:
 
 ```
 dropdb agency_test 
@@ -40,11 +41,11 @@ python test_app.py
 The first time you run the tests, omit the dropdb command.
 
 
-## API Reference befor authentication
+## API Reference 
 ## Getting Started
 
-* Base URL: At presnt this app can only be run locally and is not hosted as a base URL. The backend app is hosted at default, ```http://127.0.0.1:5000/```, which is set as a proxy in the frontend configuration.
-* Authentication: For test using a Postman collection with access tokens is provided for convenience (agency-postman-collection.postman_collection.json).
+* Base URL: This application can be run locally. The hosted version is at https://my-capstone-app.herokuapp.com.
+* Authentication: For test using a Postman collection with access tokens is provided for convenience (agency.postman_collection.json).
 
 #### Error Handling
 
@@ -64,13 +65,15 @@ The API will return five types of errors:
 * 422 - unprocessable
 * 500 - internal server error
 * 405 - method not allowed
+* 401 - Unauthorized
+* 403 - Forbidden
 
 ##### GET /movies
 
 General:
 
 * Returns a list of movies.
-* sample: curl http://127.0.0.1:5000/movies. 
+* sample: curl https://my-capstone-app.herokuapp.com/movies. 
 
 ```
 {
@@ -112,7 +115,7 @@ General:
 General:
 
 * Returns a list of actors.
-* sample: curl http://127.0.0.1:5000/actors. 
+* sample: curl https://my-capstone-app.herokuapp.com/actors. 
 
 ```
 {
@@ -163,7 +166,7 @@ General:
 If create new movie:
 
 * Returns the title of the created movie, success value and release date.
-* sample: curl -X POST -H "Content-Type: application/json" -d "{ \"title\": \"Goodfellas\",  \"release_date\": \"September 9, 1990\"}" http://127.0.0.1:5000/movies
+* sample: curl -X POST -H "Content-Type: application/json" -d "{ \"title\": \"Goodfellas\",  \"release_date\": \"September 9, 1990\"}" https://my-capstone-app.herokuapp.com/movies
 
 ```
 {
@@ -184,7 +187,7 @@ General:
 If create new actor:
 
 * Returns the name of the created actors, success value, age and gender.
-* sample: curl -X POST -H "Content-Type: application/json" -d "{ \"name\": \"Ray Liotta\",  \"age\": \"65 years\", \"gender\": \"male\"}" http://127.0.0.1:5000/actors
+* sample: curl -X POST -H "Content-Type: application/json" -d "{ \"name\": \"Ray Liotta\",  \"age\": \"65 years\", \"gender\": \"male\"}" https://my-capstone-app.herokuapp.com/actors
 
 ```
 {
@@ -205,7 +208,7 @@ General:
 If update exit movie:
 
 * Returns the title of the updated movie, success value and release date.
-* sample: curl -X  PATCH -H "Content-Type: application/json" -d "{\"title\": \"Goodfellas\",  \"release_date\": \"September 10, 1990\"}" http://127.0.0.1:5000/movies/10
+* sample: curl -X  PATCH -H "Content-Type: application/json" -d "{\"title\": \"Goodfellas\",  \"release_date\": \"September 10, 1990\"}"https://my-capstone-app.herokuapp.com/movies/10
 
 ```
 {
@@ -225,7 +228,7 @@ General:
 If update exit actor:
 
 * Returns the name of the updated actor, success value, age and gender.
-* sample: curl -X  PATCH -H "Content-Type: application/json" -d "{\"name\": \"Bradley Cooper\",  \"age\": \"46 years\", \"gender\": \"male\"}" http://127.0.0.1:5000/actors/2
+* sample: curl -X  PATCH -H "Content-Type: application/json" -d "{\"name\": \"Bradley Cooper\",  \"age\": \"46 years\", \"gender\": \"male\"}" https://my-capstone-app.herokuapp.com/actors/2
 
 ```
 {
@@ -246,7 +249,7 @@ General:
 
 * Deletes the movie of the given ID if it exists. 
 * Returns the id of the deleted movie and success value.
-* curl -X DELETE http://127.0.0.1:5000/movies/8
+* curl -X DELETE https://my-capstone-app.herokuapp.com/movies/8
 
 ```
 {
@@ -260,7 +263,7 @@ General:
 
 * Deletes the actor of the given ID if it exists. 
 * Returns the id of the deleted actor and success value.
-* curl -X DELETE http://127.0.0.1:5000/actors/6
+* curl -X DELETE https://my-capstone-app.herokuapp.com/actors/6
 
 ```
 {

@@ -1,0 +1,566 @@
+{
+	"info": {
+		"_postman_id": "b519f155-4ec4-4a85-9459-71746a1c7669",
+		"name": "agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://my-capstone-app.herokuapp.com/movies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTM2OTYsImV4cCI6MTU5ODQ0MDA5NiwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIl19.JC3xQkPR0KhsHcQy-V9JJbIohJ6fGr2Lo6w1bYNUCfotvSZa2hpHpJMqfOshP7T16xJxTJ-RIBBDwk9bthpAnyFCd0_bMlbWc4hUR2WmCR5khiCdQ1IHoYFv-_Eh7A4kpwZvWzbojwPbCRdEtraYfbYM3CdpbvPkAkIxf7ymTZBPwf6hQym-HGDZHneLVmskhaOq7DSQFpjgEMJHcBnmiOYTNddmmSKCkr6onCZLAWJwgk7sHLFBZCq24SHhPCUDhV1lySbXQhmK-ugiflyqFu3OKfWt_2d9SFhwd2fjt0k8HniImnXak_WLCTGTOhOELPJ7nhmAVrJmK4qSEqr3Jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				},
+				"description": "get all movies by viewer"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/actors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTM2OTYsImV4cCI6MTU5ODQ0MDA5NiwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIl19.JC3xQkPR0KhsHcQy-V9JJbIohJ6fGr2Lo6w1bYNUCfotvSZa2hpHpJMqfOshP7T16xJxTJ-RIBBDwk9bthpAnyFCd0_bMlbWc4hUR2WmCR5khiCdQ1IHoYFv-_Eh7A4kpwZvWzbojwPbCRdEtraYfbYM3CdpbvPkAkIxf7ymTZBPwf6hQym-HGDZHneLVmskhaOq7DSQFpjgEMJHcBnmiOYTNddmmSKCkr6onCZLAWJwgk7sHLFBZCq24SHhPCUDhV1lySbXQhmK-ugiflyqFu3OKfWt_2d9SFhwd2fjt0k8HniImnXak_WLCTGTOhOELPJ7nhmAVrJmK4qSEqr3Jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				},
+				"description": "get all actors by viewer"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/movies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				},
+				"description": "get all movies by manager"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/actors ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				},
+				"description": "get all actors by manager"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/movies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"title\": \"fight club\",\r\n     \"release_date\": \"September 10, 1999\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				},
+				"description": "post movie to system by manager"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/actors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"name\": \"Edward Norton\",\r\n     \"age\": \"51 years\",\r\n     \"gender\": \"male\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				},
+				"description": "post new actor by manager"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/actors/7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"name\": \"Bradley Cooper\",\r\n     \"age\": \"47 years\",\r\n     \"gender\": \"male\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/actors/7",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"7"
+					]
+				},
+				"description": "update an age of actor by manager"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/movies/8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"title\": \"Goodfellas\",\r\n \"release_date\": \"September 10, 1990\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/movies/8",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"8"
+					]
+				},
+				"description": "update the date of movie by manager"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/movies/9",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"title\": \"Goodfellas\",\r\n \"release_date\": \"September 10, 1990\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/movies/9",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"9"
+					]
+				},
+				"description": "delete movie by manager"
+			},
+			"response": []
+		},
+		{
+			"name": "https://my-capstone-app.herokuapp.com/actors/8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c023e79c-021a-4f83-bb47-44a573f41fe5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNaSmRmcEJMZi1MWnJRRGJETnhmayJ9.eyJpc3MiOiJodHRwczovL2Rldi1tYW5hci1hYnVkbHJobWFuLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjQzNzZhOGExYjQxZjAwNjc4MjIyNTEiLCJhdWQiOiJhZ2VuY3kiLCJpYXQiOjE1OTgzNTQyMzAsImV4cCI6MTU5ODQ0MDYzMCwiYXpwIjoiRkR0VWtiRTFxa0ZkTzg1RThuc2txdU9tVlo0MUdEZEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.T0KXLQ7gA83X9lrK2EaEWJIEbI89rCi0auSPJ7zkusPmrr6MWr7kv0hxRQQSE875fyKXBFYMnPNm0DeYpstM5T7gKIaquKvYV30JFdEivH-h7ecuDwRWbUgoEMF2RtXKw8PCeNKXUKioXdyhmK05RYCrBmnVOhnq6tKqD6gR8L4xcMxlB8Wts5lRJ8BEGH0uOD9CjRPHckJw5lIA02gvEpHyJ6NRecrDEESAi7PQ2kQ2pUFPbpxRqF6Cb5IqBuV-vRwIEiN4PTZsrmux3I59fpJHsXvxP8KUKG5feSNZREVMhh97FzHIPzntaDxtX9_OiTp8A2RVltuDCyCEA-XAOQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"title\": \"Goodfellas\",\r\n \"release_date\": \"September 10, 1990\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my-capstone-app.herokuapp.com/actors/8",
+					"protocol": "https",
+					"host": [
+						"my-capstone-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"8"
+					]
+				},
+				"description": "delete actor by manager"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
