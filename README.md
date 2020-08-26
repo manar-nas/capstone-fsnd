@@ -1,53 +1,88 @@
 # capstone project for the udacity full stack nanodegree program.
 
-Heroku link: 
+Heroku link: ``` https://my-capstone-app.herokuapp.com/ ```
 
-``` 
-https://my-capstone-app.herokuapp.com
-``` 
+## Casting Agency Specifications
+
+The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies.
+
+# Motivation
+
+* Architect relational database models in Python.
+* Utilize SQLAlchemy to conduct database queries.
+* Follow RESTful principles of API development.
+* Structure endpoints to respond to four HTTP methods, including error handling.
+* Implement authentication and Role Based Access Control using Auth0.
+* Enable Role-Based Authentication and role-based access control (RBAC) in a Flask application.
+* Deploy the app to Heroku.
+
 
 ## Installing Dependencies
+ 
+##### Python 3.7
+
+Follow instructions to install the latest version of python for your platform in the python docs ``` https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/ ```
+
+##### Virtual Enviornment
+
+We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the python docs
+
+##### PIP Dependencies
 
 Once you have your virtual environment setup and running, install dependencies by naviging to the /backend directory and running:
 
+``` 
+pip install -r requirements.txt 
 ```
-pip install -r requirements.txt
 
-```
+This will install all of the required packages we selected within the requirements.txt file.
 
-To run the application run the following commands:
+##### Key Dependencies
+
+* Flask is a lightweight backend microservices framework. Flask is required to handle requests and responses.
+
+* SQLAlchemy is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py.
+
+
+# Running the server
+
+From within the directory first ensure you are working using your created virtual environment.
+
+To run the server, execute:
 
 ```
 export DATABASE_URL=<database-url>
 export FLASK_APP=app.py
 export FLASK_ENV=development
-flask run 
-```
-Flask documentation. the application is run on
-```
-http://127.0.0.1:5000/
-```
-
-# Tests
-
-To tests following commands:
+flask run
 
 ```
-dropdb agency_test 
-createdb agency_test
-psql agency_test < agency.psql
-python test_app.py
-```
-The first time you run the tests, omit the dropdb command.
 
+# API Reference
 
-## API Reference 
-## Getting Started
+# Getting Started
 
-* Base URL: This application can be run locally. The hosted version is at https://my-capstone-app.herokuapp.com.
-* Authentication: For test using a Postman collection with access tokens is provided for convenience (agency.postman_collection.json).
+Base URL: This application can be run locally. The hosted version is at ``` https://my-capstone-app.herokuapp.com. ```
 
-#### Error Handling
+Authentication: This application requires authentication to perform various actions. All the endpoints require various permissions using Auth0's Role Based Access Control (RBAC).
+
+The application has three different types of roles:
+
+viewer
+only has view the list of actors and movies permissions.
+* get:actors
+* get:movies 
+Manager
+has all permissions to make all actions
+* get:actors
+* get:movies
+* patch:actors
+* patch:movies
+* post:movies
+* post:actors
+* delete:movies
+* delete: actors
+# Error Handling
 
 Errors are returned as JSON in the following format:
 
@@ -67,6 +102,8 @@ The API will return five types of errors:
 * 405 - method not allowed
 * 401 - Unauthorized
 * 403 - Forbidden
+
+# Endpoints
 
 ##### GET /movies
 
@@ -271,18 +308,17 @@ General:
   "success": true
 }
 ```
-## Authentication and Permissions
-#### Authentication is handled via Auth0.
+# Testing
+For testing the backend, run the following commands (in the exact order):
 
-###### API endpoints use these permissions:
-
-* 'delete:actors'
-* 'delete:movies'
-* 'patch:actors'
-* 'patch:movies'
-* 'post:movies'
-* 'post:actors'
-* 'get:actors'
-* 'get:movies'
-
+```
+dropdb -U postgres agency_test
+Password: 5678.mna
+createdb -U postgres agency_test
+Password: 5678.mna
+psql agency_test postgres < agency.psql
+Password for user postgres: 5678.mna
+python test_app.py
+```
+The first time you run the tests, omit the dropdb command.
  

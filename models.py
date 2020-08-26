@@ -16,7 +16,6 @@ def db_setup(app, database_path=os.environ.get('DATABASE_URL')):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    db.create_all()
 
 
 # ----------------------------------------------------------------------------#
