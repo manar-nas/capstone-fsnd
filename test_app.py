@@ -138,7 +138,7 @@ class AgencyTestCase(unittest.TestCase):
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
-        self.assertEqual(movie.format()['release_date'], "December 14, 2015")
+        self.assertEqual(movie.format()['release_date'], "December 10, 2009")
 
     def test_for_failed_update_movie(self):
         res = self.client().patch('/movies/100')
@@ -156,7 +156,7 @@ class AgencyTestCase(unittest.TestCase):
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
-        self.assertEqual(actor.format()['age'], "33 years")
+        self.assertEqual(actor.format()['age'], "49 years")
 
     def test_failed_update_actor(self):
         res = self.client().patch('/actors/100')
@@ -171,7 +171,7 @@ class AgencyTestCase(unittest.TestCase):
         res = self.client().delete('/movies/9')
         data = json.loads(res.data)
 
-        movie = Movie.query.filter(Movie.id == 9).one_or_none()
+        movie = Movie.query.filter(Movie.id == 3).one_or_none()
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
@@ -187,10 +187,10 @@ class AgencyTestCase(unittest.TestCase):
 
     # test for delete one actor
     def test_actor_delete(self):
-        res = self.client().delete('/actors/8')
+        res = self.client().delete('/actors/9')
         data = json.loads(res.data)
 
-        actor = Actor.query.filter(Actor.id == 8).one_or_none()
+        actor = Actor.query.filter(Actor.id == 3).one_or_none()
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
