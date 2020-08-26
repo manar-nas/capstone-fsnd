@@ -132,9 +132,9 @@ class AgencyTestCase(unittest.TestCase):
 
     def test_update_movie(self):
         res = self.client().patch(
-            '/movies/4', json={"release_date": "December 10, 2009"})
+            '/movies/9', json={"release_date": "December 10, 2009"})
         data = json.loads(res.data)
-        movie = Movie.query.filter(Movie.id == 4).one_or_none()
+        movie = Movie.query.filter(Movie.id == 9).one_or_none()
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
@@ -150,13 +150,13 @@ class AgencyTestCase(unittest.TestCase):
 
     # test for update one actor
     def test_update_actor(self):
-        res = self.client().patch('/actors/4', json={'age': "49 years"})
+        res = self.client().patch('/actors/8', json={'age': "49 years"})
         data = json.loads(res.data)
-        actor = Actor.query.filter(Actor.id == 4).one_or_none()
+        actor = Actor.query.filter(Actor.id == 8).one_or_none()
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
-        self.assertEqual(actor.format()['age'], "51 years")
+        self.assertEqual(actor.format()['age'], "33 years")
 
     def test_failed_update_actor(self):
         res = self.client().patch('/actors/100')
@@ -168,10 +168,10 @@ class AgencyTestCase(unittest.TestCase):
 
     # test for delete one movie
     def test_movie_delete(self):
-        res = self.client().delete('/movies/3')
+        res = self.client().delete('/movies/9')
         data = json.loads(res.data)
 
-        movie = Movie.query.filter(Movie.id == 3).one_or_none()
+        movie = Movie.query.filter(Movie.id == 9).one_or_none()
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
@@ -187,10 +187,10 @@ class AgencyTestCase(unittest.TestCase):
 
     # test for delete one actor
     def test_actor_delete(self):
-        res = self.client().delete('/actors/3')
+        res = self.client().delete('/actors/8')
         data = json.loads(res.data)
 
-        actor = Actor.query.filter(Actor.id == 3).one_or_none()
+        actor = Actor.query.filter(Actor.id == 8).one_or_none()
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
